@@ -4,7 +4,6 @@ INSTALACION DE ANACONDA3
     wget https://repo.continuum.io/archive/Anaconda3-5.3.1-Linux-x86_64.sh
 
     bash Anaconda3-2018.12-Linux-x86_64.sh
-Le das ha ENTER
 
     Do you accept the license terms? [yes|no]
     [no] >>> yes
