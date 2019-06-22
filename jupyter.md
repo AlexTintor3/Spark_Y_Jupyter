@@ -1,6 +1,6 @@
----------------------------------------------------------------------------------------------
-INSTALACIÓN DE ANACONDA3:
----------------------------------------------------------------------------------------------
+INSTALACION DE ANACONDA3
+-
+
 cd /tmp
 wget https://repo.continuum.io/archive/Anaconda3-5.3.1-Linux-x86_64.sh
 
@@ -21,7 +21,7 @@ conda install python=3.5
 
 jupyter notebook --generate-config
 nano ~/.jupyter/jupyter_notebook_config.py
-y modificamos la línea de esta forma:
+y modificamos la lÃ­nea de esta forma:
 c.NotebookApp.allow_root=True
 
 jupyter notebook password
