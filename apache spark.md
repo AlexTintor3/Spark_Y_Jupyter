@@ -44,9 +44,9 @@ configuracion openssh(todo esto en el spark master)
 	ssh-copy-id -i ~/.ssh/id_rsa.pub root@ip_de_la_maquina
 
 -------------------------------------------------------------------------------------------------
-Configuración de Apache Spark en el servidor master
+ConfiguraciÃ³n de Apache Spark en el servidor master
 	cp slaves.template slaves
-	nano slaves(añadir direccion del worker):
+	nano slaves(aÃ±adir direccion del worker):
 	# A Spark Worker will be started on each of the machines listed below.
 	# localhost
 	192.168.3.2
@@ -54,7 +54,7 @@ Configuración de Apache Spark en el servidor master
 	cp spark-env.sh.template spark-env.sh
 	nano spark-env.sh
 	export SPARK_MASTER_HOST=192.168.2.2 # En mi caso: 192.168.2.2
-	export SPARK_WORKER_CORES=1 # Número de cores que se ejecutan en el servidor.
-	export SPARK_WORKER_INSTANCES=1 # Número de procesos worker por cada nodo.	
+	export SPARK_WORKER_CORES=1 # NÃºmero de cores que se ejecutan en el servidor.
+	export SPARK_WORKER_INSTANCES=1 # NÃºmero de procesos worker por cada nodo.	
 
 	
