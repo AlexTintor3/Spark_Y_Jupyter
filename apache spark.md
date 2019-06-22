@@ -1,32 +1,33 @@
-instalacion de java:
+INSTALACION DE JAVA
+-
+	sudo apt update
+	sudo apt install dirmngr
 
-sudo apt update
-sudo apt install dirmngr
+	sh -c 'echo "deb http://ppa.launchpad.net/webupd8team/java/ubuntu trusty main" >> /etc/apt/sources.list' &&  sh -c 'echo "deb-src http://ppa.launchpad.net/webupd8team/java/ubuntu trusty main" >> /etc/apt/sources.list' &&  apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys EEA14886
 
- sh -c 'echo "deb http://ppa.launchpad.net/webupd8team/java/ubuntu trusty main" >>
- /etc/apt/sources.list' &&  sh -c 'echo "deb-src
- http://ppa.launchpad.net/webupd8team/java/ubuntu trusty main" >>
-/etc/apt/sources.list' &&  apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 
---recv-keys EEA14886
-
-sudo apt update
-sudo apt install oracle-java8-installer -y
-java -version
+	sudo apt update
+	sudo apt install oracle-java8-installer -y
+	java -version
 --------------------------------------------------------------------------------------------------
-instalacion de scala:
-	 wget https://downloads.lightbend.com/scala/2.13.0-M1/scala-2.13.0-M1.deb
-	 dpkg -i scala-2.13.0-M1.deb
+INSTALACION SCALA
+-
+	wget https://downloads.lightbend.com/scala/2.13.0-M1/scala-2.13.0-M1.deb
+	dpkg -i scala-2.13.0-M1.deb
 
 	scala -version
 	scala
+
 ------------------------------------------------------------------------------------------------
-instalacion y configuracion de openssh
+INSTALACION Y CONFIGURACION DE OPENSSH
+-
 	apt-get install openssh-server
 
 	 nano /etc/ssh/sshd_config
-		editar PermitRootLogin yes
--------------------------------------------------------------------------------------------------
-instalacion apachespark:
+editar PermitRootLogin yes
+
+
+INSTALACION APACHE SPARK
+-
 	wget http://d3kbcqa49mib13.cloudfront.net/spark-2.1.0-bin-hadoop2.7.tgz
 	mkdir /opt/spark
 	tar -xzvf spark-2.1.0-bin-hadoop2.7.tgz
@@ -39,12 +40,14 @@ instalacion apachespark:
 	source ~/.bashrc
 
 --------------------------------------------------------------------------------------------------
-configuracion openssh(todo esto en el spark master)
+CONFIGURACION OPENSSH(MASTER)
+-
 	ssh-keygen
 	ssh-copy-id -i ~/.ssh/id_rsa.pub root@ip_de_la_maquina
 
 -------------------------------------------------------------------------------------------------
-Configuración de Apache Spark en el servidor master
+CONFIGURACION APACHE SPARK(MASTER)
+-
 	cp slaves.template slaves
 	nano slaves(añadir direccion del worker):
 	# A Spark Worker will be started on each of the machines listed below.
